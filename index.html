@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Shop</title>
+  <title>My Pro Shop</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <h1>🛍️ My Online Shop</h1>
-  <p>Best products for you</p>
+  <h1>🛍️ My Pro Shop</h1>
 </header>
 
 <section class="products">
 
-  <div class="product">
+  <div class="card">
     <h3>T-shirt</h3>
-    <p>Price: 100 MAD</p>
-    <button onclick="addToCart('T-shirt')">Add to cart</button>
+    <p>100 MAD</p>
+    <button onclick="addToCart('T-shirt', 100)">Add</button>
   </div>
 
-  <div class="product">
+  <div class="card">
     <h3>Shoes</h3>
-    <p>Price: 300 MAD</p>
-    <button onclick="addToCart('Shoes')">Add to cart</button>
+    <p>300 MAD</p>
+    <button onclick="addToCart('Shoes', 300)">Add</button>
+  </div>
+
+  <div class="card">
+    <h3>Cap</h3>
+    <p>80 MAD</p>
+    <button onclick="addToCart('Cap', 80)">Add</button>
   </div>
 
 </section>
 
+<hr>
+
 <h2>🛒 Cart</h2>
 <ul id="cart"></ul>
+
+<h3>Total: <span id="total">0</span> MAD</h3>
 
 <script src="script.js"></script>
 </body>
