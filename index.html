@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pro Market</title>
+  <title>My Pro Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <div class="logo">🟠 ProMarket</div>
+  <div class="logo">🟠 ProStore</div>
 
   <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
 
   <div class="cart-box">
-    🛒 Cart: <span id="total">0</span> MAD
+    🛒 <span id="total">0</span> MAD
   </div>
 </header>
 
@@ -27,33 +27,7 @@
     <button onclick="filterCategory('tech')">Tech</button>
   </aside>
 
-  <main>
-
-    <div class="card clothes">
-      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-      <h3>T-shirt</h3>
-      <div class="stars">⭐⭐⭐⭐☆</div>
-      <p>100 MAD</p>
-      <button onclick="addToCart('T-shirt',100)">Add to cart</button>
-    </div>
-
-    <div class="card shoes">
-      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
-      <h3>Shoes</h3>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <p>350 MAD</p>
-      <button onclick="addToCart('Shoes',350)">Add to cart</button>
-    </div>
-
-    <div class="card tech">
-      <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5">
-      <h3>Headphones</h3>
-      <div class="stars">⭐⭐⭐⭐☆</div>
-      <p>200 MAD</p>
-      <button onclick="addToCart('Headphones',200)">Add to cart</button>
-    </div>
-
-  </main>
+  <main id="products"></main>
 
 </div>
 
