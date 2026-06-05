@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Pro Shop</title>
+  <title>My Amazon Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <h1>🛍️ My Pro Shop</h1>
+  <div class="logo">🟠 MyAmazon</div>
+
+  <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
+
+  <div class="cart-box">
+    🛒 <span id="total">0</span> MAD
+  </div>
 </header>
 
-<section class="products">
+<div class="container">
 
-  <div class="card">
-    <h3>T-shirt</h3>
-    <p>100 MAD</p>
-    <button onclick="addToCart('T-shirt', 100)">Add</button>
-  </div>
+  <!-- SIDEBAR -->
+  <aside>
+    <h3>Categories</h3>
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('clothes')">Clothes</button>
+    <button onclick="filterCategory('shoes')">Shoes</button>
+    <button onclick="filterCategory('tech')">Tech</button>
+  </aside>
 
-  <div class="card">
-    <h3>Shoes</h3>
-    <p>300 MAD</p>
-    <button onclick="addToCart('Shoes', 300)">Add</button>
-  </div>
+  <!-- PRODUCTS -->
+  <main>
 
-  <div class="card">
-    <h3>Cap</h3>
-    <p>80 MAD</p>
-    <button onclick="addToCart('Cap', 80)">Add</button>
-  </div>
+    <div class="card clothes">
+      <h3>T-shirt</h3>
+      <p>100 MAD</p>
+      <button onclick="addToCart('T-shirt',100)">Add to cart</button>
+    </div>
 
+    <div class="card shoes">
+      <h3>Nike Shoes</h3>
+      <p>350 MAD</p>
+      <button onclick="addToCart('Shoes',350)">Add to cart</button>
+    </div>
+
+    <div class="card tech">
+      <h3>Headphones</h3>
+      <p>200 MAD</p>
+      <button onclick="addToCart('Headphones',200)">Add to cart</button>
+    </div>
+
+  </main>
+
+</div>
+
+<!-- CART -->
+<section class="cart">
+  <h2>🛒 Cart</h2>
+  <ul id="cart"></ul>
 </section>
-
-<hr>
-
-<h2>🛒 Cart</h2>
-<ul id="cart"></ul>
-
-<h3>Total: <span id="total">0</span> MAD</h3>
 
 <script src="script.js"></script>
 </body>
