@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My First Site</title>
+  <title>My Shop</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Hello GitHub 👋</h1>
-  <p>My website is working!</p>
+
+<header>
+  <h1>🛍️ My Online Shop</h1>
+  <p>Best products for you</p>
+</header>
+
+<section class="products">
+
+  <div class="product">
+    <h3>T-shirt</h3>
+    <p>Price: 100 MAD</p>
+    <button onclick="addToCart('T-shirt')">Add to cart</button>
+  </div>
+
+  <div class="product">
+    <h3>Shoes</h3>
+    <p>Price: 300 MAD</p>
+    <button onclick="addToCart('Shoes')">Add to cart</button>
+  </div>
+
+</section>
+
+<h2>🛒 Cart</h2>
+<ul id="cart"></ul>
+
+<script src="script.js"></script>
 </body>
 </html>
