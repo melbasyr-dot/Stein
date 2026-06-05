@@ -2,22 +2,14 @@ let total = 0;
 
 function addToCart(name, price) {
   let li = document.createElement("li");
-  li.textContent = name + " - " + price + " MAD ";
+  li.textContent = name + " - " + price + " MAD";
 
-  let btn = document.createElement("button");
-  btn.textContent = "Remove";
-
-  btn.onclick = function () {
-    total -= price;
-    document.getElementById("total").textContent = total;
-    li.remove();
-  };
-
-  li.appendChild(btn);
   document.getElementById("cart").appendChild(li);
 
   total += price;
   document.getElementById("total").textContent = total;
+
+  showToast();
 }
 
 /* SEARCH */
@@ -45,4 +37,14 @@ function filterCategory(cat) {
         : "none";
     }
   }
+}
+
+/* TOAST */
+function showToast() {
+  let toast = document.getElementById("toast");
+  toast.style.display = "block";
+
+  setTimeout(() => {
+    toast.style.display = "none";
+  }, 1500);
 }
